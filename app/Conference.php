@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Conference extends Model
 {
-    //
+    public function employees()
+    {
+        return $this->belongsToMany('App\Employee');
+    }
 }

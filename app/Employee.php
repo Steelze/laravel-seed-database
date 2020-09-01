@@ -10,4 +10,9 @@ class Employee extends Model
     {
         return $this->belongsTo('App\Employee', 'manager_id');
     }
+
+    public function conferences()
+    {
+        return $this->belongsToMany('App\Conference');
+    }
 }
