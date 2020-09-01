@@ -20,7 +20,7 @@ class CreateConferencesTable extends Migration
             $table->string('state');
             $table->string('address');
             $table->string('country');
-            $table->string('date');
+            $table->date('date');
             $table->timestamps();
         });
     }

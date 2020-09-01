@@ -26,11 +26,11 @@ class CreateEmployeesTable extends Migration
             $table->date('dob');
             $table->string('religion')->nullable();
             $table->unsignedBigInteger('department_id');
-            $table->unsignedBigInteger('manager');
+            $table->unsignedBigInteger('manager_id')->nullable();
             $table->timestamps();
 
             $table->foreign('department_id')->references('id')->on('departments');
-            $table->foreign('manager')->references('id')->on('employees');
+            $table->foreign('manager_id')->references('id')->on('employees');
         });
     }
 
